@@ -13,8 +13,22 @@ text='
 <main>
 ';
 for i in images/*; do
- text=$text'<img src="./'$i'">'
- json=$json'{"src": "'$i'"}'
+ if [ -f $i ]; 
+  then
+    text=$text'  <a href="./'$i'"><img src="./'$i'"></a>';
+    text=$text"
+";
+    json=$json'{"src": "'$i'"}'
+  else
+    for j in $i/*; do
+     text=$text'  <a href="./'$j'"><img src="./'$j'"></a>
+ ';
+    text=$text"
+";
+
+     json=$json'{"src": "'$j'"}'
+   done
+  fi 
 done
 
 text=$text'
