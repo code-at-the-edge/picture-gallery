@@ -1,13 +1,25 @@
 main {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-width: 1200px;
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fill, 200px); */
+    /* grid-gap: 20px; */
+    /* grid-template-rows: repeat(auto-fill, 200px); */
+
+    display: flex;              /*don't change this*/
+    flex-direction: row;        /*don't change this*/
+    flex-wrap: wrap;            /*don't change this*/
+    align-items: center;        /*cross-axis: default is stretch*/
+    justify-content: space-around; /*main axis: default is flex-start, also try space-between, space-evenly, center */
 }
+
+main > a {
+    display: contents;          /*awesome new value that makes the img tags the target of flexbox*/
+}
+
 img {
-  width: 100%;
-}
-.image-cell {
-  width: 15%;
-  margin: 0.25rem;
+    flex-basis: 300px;
+    padding: 10px;
+    border: 1px gray solid;
+    margin: 3px;
+    /* max-width: 100%; */
+    /* max-height: 100%; */
 }
