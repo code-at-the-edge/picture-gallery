@@ -35,4 +35,4 @@ text=$text'
 </main>
 </body>
 </html>'
-echo $text > index.html
+echo -e "${text}" > index.html
