@@ -1,13 +1,13 @@
 main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1200px;
 }
 img {
   width: 100%;
 }
 .image-cell {
   width: 15%;
-  margin: 1rem;
+  margin: 0.25rem;
 }

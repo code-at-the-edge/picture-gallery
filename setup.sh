@@ -13,22 +13,22 @@ text='
 <main>
 ';
 for i in images/*; do
- if [ -f $i ]; 
+ if [ -f $i ];
   then
-    text=$text'  <a href="./'$i'"><img src="./'$i'"></a>';
+    text=$text'  <div class="image-cell"><a href="./'$i'"><img src="./'$i'"></a></div>';
     text=$text"
 ";
     json=$json'{"src": "'$i'"}'
   else
     for j in $i/*; do
-     text=$text'  <a href="./'$j'"><img src="./'$j'"></a>
+     text=$text'  <div class="image-cell"><a href="./'$j'"><img src="./'$j'"></a></div>
  ';
     text=$text"
 ";
 
      json=$json'{"src": "'$j'"}'
    done
-  fi 
+  fi
 done
 
 text=$text'
